@@ -1,0 +1,22 @@
+<html>
+      <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>document</title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      </head>
+      <body>
+            <div class="container">
+                <h2>{{ pet.pet_name }}</h2>
+            <div class="callout">
+                <span style="font-weight: 800">Did you know?</span><br/>{{ pet.pet_fact }}
+            </div>
+            <div class="pets-container">
+                 <img src="{{ url_for('static', filename='assets/') }}{{pet.pet_photo}}"/>
+            </div>
+            <a href="/pets"> Go back</a>
+            </div> 
+      </body>
+</html>
